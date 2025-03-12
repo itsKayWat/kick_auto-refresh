@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "Kick Auto Refresh Plus",
+  "version": "1.0.0",
+  "description": "Automatically refreshes Kick.com streams during connection issues. Smart detection and custom settings for uninterrupted viewing.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Kick Auto Refresh Plus",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "settings.html",
+  "web_accessible_resources": [{
+    "resources": ["readme.html"],
+    "matches": ["<all_urls>"]
+  }],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+K"
+      },
+      "description": "Open Kick Auto Refresh Plus"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://kick.com/*",
+        "*://*.kick.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "storage",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "https://kick.com/*"
+  ]
+}
