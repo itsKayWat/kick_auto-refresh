@@ -1,0 +1,11 @@
+{
+  "name": "kick-auto-refresh",
+  "version": "1.0.0",
+  "description": "Auto refresh for Kick.com streams",
+  "scripts": {
+    "generate-icons": "node icons/generate_icons.js"
+  },
+  "devDependencies": {
+    "sharp": "^0.32.6"
+  }
+} 
