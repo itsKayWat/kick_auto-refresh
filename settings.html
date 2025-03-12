@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Kick Auto Refresh Settings</h2>
+            <p class="subtitle">Configure auto-refresh behavior for Kick.com streams</p>
+        </div>
+        
+        <div class="settings-group">
+            <h3>General Settings</h3>
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label>Enable Auto Refresh</label>
+                    <span class="description">Automatically refresh when stream goes offline</span>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="enableAutoRefresh">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label>Auto-start on Live Streams</label>
+                    <span class="description">Automatically enable refresh when entering live streams</span>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="autoStartOnLive">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="settings-group">
+            <h3>Display Settings</h3>
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label>Show Status Duration</label>
+                    <span class="description">How long to show status messages (seconds)</span>
+                </div>
+                <input type="number" id="showDuration" min="3" max="10" value="6">
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label>Status Update Interval</label>
+                    <span class="description">Time between status reminders (30-300 seconds)</span>
+                </div>
+                <input type="number" id="periodicInterval" min="30" max="300" value="180">
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label>Show Status Messages</label>
+                    <span class="description">Display periodic status updates next to logo</span>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="showStatus" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="settings-group">
+            <h3>Refresh Settings</h3>
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label>Refresh Interval</label>
+                    <span class="description">Time between refresh attempts (seconds)</span>
+                </div>
+                <input type="number" id="refreshInterval" min="5" max="60" value="15">
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label>Max Retry Attempts</label>
+                    <span class="description">Maximum number of refresh attempts</span>
+                </div>
+                <input type="number" id="maxRetries" min="1" max="20" value="5">
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button id="closeSettings">Close</button>
+            <button id="openReadme">README</button>
+            <button id="resetDefaults">Reset to Defaults</button>
+            <button id="saveSettings" class="primary">Save Settings</button>
+        </div>
+
+        <div class="footer">
+            <div class="coffee-section">
+                <h3>☕️ Fuel the Development!</h3>
+                <p>Created with ❤️ by KayWat</p>
+                <p class="subtitle">Your coffee keeps the updates coming and helps maintain this free tool for everyone!</p>
+                <a href="https://www.buymeacoffee.com/kaywat" target="_blank" class="coffee-button">Buy me a coffee ☕️</a>
+            </div>
+            <div class="bottom-text">
+                <p>Check out our other tools: <a href="https://onpoint.fixmyapple.org" target="_blank">OnPoint</a></p>
+                <p>© 2024 KayWat. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <script src="settings.js"></script>
+</body>
+</html>
