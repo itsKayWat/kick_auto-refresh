@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <!-- Dark circle background with same opacity as overlay -->
+    <circle cx="50" cy="50" r="50" fill="rgba(26, 26, 26, 0.9)"/>
+    <!-- Green k with exact same positioning and size ratio as overlay -->
+    <text x="50" y="70" 
+          text-anchor="middle" 
+          font-family="Arial Black, Arial" 
+          font-weight="900" 
+          font-size="70" 
+          fill="rgb(83, 252, 24)">k</text>
+</svg> 
