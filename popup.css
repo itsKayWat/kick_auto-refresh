@@ -1,0 +1,147 @@
+:root {
+    --kick-green: #53FC18;
+    --dark-bg: #1A1A1A;
+    --darker-bg: #0F0F0F;
+    --text-color: #FFFFFF;
+    --border-color: #FFFFFF;
+    --text-secondary: #FFFFFF;
+}
+
+body {
+    width: 300px;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    padding: 15px;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h2 {
+    color: var(--kick-green);
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
+.setting-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--darker-bg);
+    border-radius: 5px;
+}
+
+input[type="number"] {
+    width: 70px;
+    background-color: var(--dark-bg);
+    border: 1px solid var(--kick-green);
+    color: var(--text-color);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+button {
+    background-color: transparent;
+    color: var(--kick-green);
+    border: 2px solid var(--kick-green);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--kick-green);
+    color: var(--darker-bg);
+}
+
+button.secondary {
+    background-color: var(--kick-green);
+    color: var(--darker-bg);
+    border: none;
+    opacity: 0.8;
+}
+
+button.secondary:hover {
+    opacity: 1;
+}
+
+/* Switch styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--darker-bg);
+    transition: .4s;
+    border-radius: 34px;
+    border: 1px solid var(--kick-green);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 3px;
+    background-color: var(--kick-green);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--kick-green);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+    background-color: var(--darker-bg);
+}
+
+.divider {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 20px 0 15px 0;
+    opacity: 0.2;
+}
+
+.footer {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.footer a {
+    color: #FF4545;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
