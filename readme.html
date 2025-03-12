@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kick Auto Refresh - Documentation</title>
+    <style>
+        :root {
+            --background: #1a1a1a;
+            --text: #ffffff;
+            --section-bg: #2d2d2d;
+            --kick-green: #53FC18;
+            --border: #333333;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: var(--kick-green);
+        }
+
+        .section {
+            background-color: var(--section-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 10px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .feature-list li:before {
+            content: "•";
+            color: var(--kick-green);
+            position: absolute;
+            left: 8px;
+        }
+
+        .donation-section {
+            text-align: center;
+            padding: 40px 0 0 0;
+            border-top: 2px solid var(--border);
+            margin-top: 60px;
+            position: relative;
+        }
+
+        .coffee-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .coffee-button {
+            background-color: var(--kick-green);
+            color: var(--background);
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+
+        .coffee-button:hover {
+            opacity: 0.9;
+        }
+
+        code {
+            background-color: rgba(83, 252, 24, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        .button-group {
+            position: absolute;
+            top: -32px;
+            right: 0;
+            background: var(--background);
+            padding: 0 10px;
+        }
+
+        button {
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.2s;
+            background-color: var(--section-bg);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        button:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+            background-color: var(--border);
+        }
+
+        .donation-section h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .donation-section p {
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kick Auto Refresh Plus</h1>
+        
+        <div class="section">
+            <h2>About</h2>
+            <p>Kick Auto Refresh Plus is a Chrome extension designed to automatically refresh Kick.com livestreams when they encounter connection issues, bandwidth problems, or inactivity/bot checks. It helps maintain uninterrupted viewing by detecting stream interruptions and automatically attempting to restore the connection.</p>
+        </div>
+
+        <div class="section">
+            <h2>Features</h2>
+            <ul class="feature-list">
+                <li>Automatic detection of stream interruptions</li>
+                <li>Configurable refresh intervals (5-60 seconds)</li>
+                <li>Adjustable retry attempts (1-20 times)</li>
+                <li>Visual status indicator</li>
+                <li>Stream status messages</li>
+                <li>Works only on active livestreams</li>
+                <li>Smart detection of permanent stream end</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>How It Works</h2>
+            <p>When you load a Kick.com channel that's currently streaming:</p>
+            <ul class="feature-list">
+                <li>The extension activates automatically if enabled</li>
+                <li>A small "K" indicator appears to show it's active</li>
+                <li>If the stream encounters issues, automatic refresh begins</li>
+                <li>The extension will retry based on your settings</li>
+                <li>Status messages keep you informed of the progress</li>
+                <li>Stops automatically if the stream truly ends</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Settings</h2>
+            <ul class="feature-list">
+                <li><code>Enable Auto Refresh</code>: Turn the feature on/off</li>
+                <li><code>Refresh Interval</code>: Time between refresh attempts (5-60 seconds)</li>
+                <li><code>Max Retry Attempts</code>: Number of refresh attempts before stopping (1-20)</li>
+                <li><code>Show Status Messages</code>: Display refresh countdown and status</li>
+                <li><code>Show Overlay Icon</code>: Show/hide the "K" indicator</li>
+            </ul>
+        </div>
+
+        <div class="donation-section">
+            <div class="button-group">
+                <button id="closeReadme">Close</button>
+            </div>
+            <h2>💰 Donate to KayWat</h2>
+            <p>Your support keeps me fueled and creating! Thanks! ❤️</p>
+            <div class="coffee-buttons">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=J3ABMPG6MQF3L&custom=1coffee" target="_blank" class="coffee-button">☕️ $6 (1 coffee)</a>
+                <a href="https://www.paypal.com/donate/?hosted_button_id=J3ABMPG6MQF3L&custom=2coffees" target="_blank" class="coffee-button">☕️☕️ $12 (2 coffees)</a>
+                <a href="https://www.paypal.com/donate/?hosted_button_id=J3ABMPG6MQF3L&custom=3coffees" target="_blank" class="coffee-button">☕️☕️☕️ $24 (3 coffees)</a>
+            </div>
+            <p style="margin-top: 20px;">Developer: KayWat</p>
+        </div>
+    </div>
+    <script src="readme.js"></script>
+</body>
+</html> 
