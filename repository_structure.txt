@@ -1,0 +1,43 @@
+KICK AUTO REFRESH PLUS
+=====================
+
+Repository Structure
+-------------------
+
+├── icons/                      # Extension icons
+│   ├── icon.svg               # Source icon
+│   ├── icon16.png            # Browser toolbar icon
+│   ├── icon48.png            # Extension menu icon
+│   ├── icon128.png           # Store listing icon
+│   └── generate_icons.js      # Icon generation script
+│
+├── src/                       # Source code
+│   ├── core/                 # Core functionality
+│   ├── ui/                   # User interface components
+│   └── utils/                # Utility functions
+│
+├── api/                      # API integration
+├── ml/                      # Machine learning components
+│
+├── manifest.json            # Extension manifest
+├── popup.html              # Extension popup
+├── popup.js               # Popup functionality
+├── popup.css              # Popup styles
+├── content.js             # Content script
+├── background.js          # Background service worker
+├── settings.html          # Settings page
+├── settings.js           # Settings functionality
+├── readme.html           # HTML documentation
+├── readme.txt            # Plain text documentation
+├── privacy.html          # Privacy policy
+├── Dev-Manual.html       # Developer manual
+│
+├── requirements.py       # Requirements installer
+├── package.json         # Project configuration
+└── repository_structure.txt  # This file
+
+Notes:
+- All source files use ES6+ JavaScript
+- HTML files use HTML5
+- CSS follows BEM methodology
+- Documentation in both HTML and TXT formats
